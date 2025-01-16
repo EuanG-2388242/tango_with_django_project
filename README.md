@@ -13,3 +13,4 @@ chapter 3 has been about the basics of creating URLs and how to push URL command
 what i mean is main file folder URL www.somename.com/ when it reaches a point where rango/ shows up
 itll poush the commands to the rango file to execute folder
 
+
