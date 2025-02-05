@@ -25,14 +25,13 @@ class PageForm(forms.ModelForm):
         url = cleaned_data.get('url')
 
         if url and not url.startswith('http://'):
-            url = f'http://{url}'
+            url = 'http://' + url
             cleaned_data['url'] = url
 
         return cleaned_data
-    
-    
-class Meta:
 
-    model = Page
+    class Meta:
 
-    exclude = ('category',)
+        model = Page
+
+        exclude = ('category',)
