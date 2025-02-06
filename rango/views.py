@@ -25,8 +25,8 @@ def index(request):
     #Note that the first parameter is the template we wish to use.
     return render(request, 'rango/index.html', context=context_dict)
 
+@login_required
 def add_category(request):
-
     form = CategoryForm()
     if request.method == 'POST':
         form = CategoryForm(request.POST)
@@ -60,6 +60,7 @@ def show_category(request, category_name_slug):
     
     return render(request, 'rango/category.html', context=context_dict)
 
+@login_required
 def add_page(request, category_name_slug):
     try:
         category = Category.objects.get(slug=category_name_slug)
